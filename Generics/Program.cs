@@ -61,14 +61,14 @@ public class test<T> where T : class // this is constraint for passing class onl
 
 }
 
-public class Customers {
+public class Customer {
 
     private string name;
     private int id;
     private int NumOforders;
     private double price;
 
-    public Customers()
+    public Customer()
     {
         this.name = string.Empty;
         this.id = 0;
@@ -76,7 +76,7 @@ public class Customers {
         this.price = 0;
     }
 
-    public Customers(string name, int id, int numOforders, double price)
+    public Customer(string name, int id, int numOforders, double price)
     {
         this.checkName(name);
         this.checkId(id);
@@ -151,22 +151,22 @@ internal class Program
     private static void Main(string[] args)
     {
         // if i use the array or i will deal with array
-        Customers customer = new Customers("Gamal", 1121, 4, 345.5);
-        Customers customer2 = new Customers("Ali", 1121, 4, 345.5);
-        Customers customer3 = new Customers("ahmed", 1121, 4, 345.5);
-        Customers customer4 = new Customers("bilal", 1121, 4, 345.5);
+        Customer customer = new Customer("Gamal", 1121, 4, 345.5);
+        Customer customer2 = new Customer("Ali", 1121, 4, 345.5);
+        Customer customer3 = new Customer("ahmed", 1121, 4, 345.5);
+        Customer customer4 = new Customer("bilal", 1121, 4, 345.5);
 
 
         test<Customers> customers = new test<Customers>();
 
-        customers.add(customer);
-        customers.add(customer2);
-        customers.add(customer3);
-        customers.add(customer4);
+        customer.add(customer);
+        customer.add(customer2);
+        customer.add(customer3);
+        customer.add(customer4);
 
-        customers.display();
-        Console.WriteLine("\n numbero f size is: " + customers.getSize());
-        customers.getLength();
+        customer.display();
+        Console.WriteLine("\n numbero f size is: " + customer.getSize());
+        customer.getLength();
 
         customers.remove(3);
 
@@ -175,7 +175,7 @@ internal class Program
 
         // if i will deal with List and there are like this bult in function.
 
-        List<Customers> people = new List<Customers>();
+        List<Customer> people = new List<Customer>();
         
         people.Add(customer);
         people.Add(customer2);
