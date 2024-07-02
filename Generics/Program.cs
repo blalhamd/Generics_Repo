@@ -131,7 +131,7 @@ public class Customer {
     public double getPrice() { return this.price;}
 
     public void getAll() {
-        Console.WriteLine("Name: " + name);
+        Console.WriteLine($"Name: {name}");
         Console.WriteLine("id: " + id);
         Console.WriteLine("number of orders: " + NumOforders);
         Console.WriteLine("price: " + price);
